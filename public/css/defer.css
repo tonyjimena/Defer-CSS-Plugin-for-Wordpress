@@ -1,0 +1,201 @@
+.adminPluginContainer {
+	margin: 5rem;
+}
+
+#functionContainer {
+	/*display: none;*/
+}
+
+.framer {
+	width: 0%;
+    height: 0%;
+    position: absolute;
+    opacity: 0;
+}
+
+.loader {
+	margin: 2rem;
+    display: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+#ajaxForm {
+	display: none;
+    position: relative;
+	animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+	0% {
+		top: 25rem;
+		opacity: 0;
+	}
+	100% {
+		top: 0rem;
+		opacity: 1;
+	}
+}
+
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:12px 36px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#deferButton {
+	display: none;
+}
+
+#ajaxForm {
+    display: none;
+    margin-top: 2rem;
+}
+
+.submitWrapper {
+	display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.responseWrapper {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.okey {
+	display: block; color: green; font-size: 2rem;
+}
+.fail {
+	display: block; color: red; font-size: 2rem;
+}
+
+
+
+table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    table-layout: auto;
+  }
+  
+  table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+  }
+  
+  table tr {
+	background-color: #f8f8f8;
+	border: 1px solid #ddd;
+	padding: .35em;
+  }
+  
+  table th,
+  table td {
+	padding: .625em;
+	text-align: start;
+	overflow: auto;
+
+  }
+  
+  table th {
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+  }
+
+  tbody {
+	font-size: 1rem;
+  }
+
+  @media screen and (max-width: 1080px) {
+	  table {
+		  table-layout: fixed;
+	  }
+
+	  table th,
+	  table td {
+		text-align: center;
+
+	  }
+  }
+  
+  @media screen and (max-width: 600px) {
+	table {
+	  border: 0;
+	}
+  
+	table caption {
+	  font-size: 1.3em;
+	}
+	
+	table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	
+	table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: .8em;
+	  text-align: right;
+	}
+	
+	table td::before {
+	  /*
+	  * aria-label has no advantage, it won't be read inside a table
+	  content: attr(aria-label);
+	  */
+	  content: attr(data-label);
+	  float: left;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	
+	table td:last-child {
+	  border-bottom: 0;
+	}
+  }
